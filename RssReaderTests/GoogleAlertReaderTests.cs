@@ -28,7 +28,7 @@ namespace RssReader.Tests
 
             Task<string> task = reader.ReadOnesAsync(url_googlealert);
 
-            task.Wait();
+            task.Wait(10000);
 
             string xmlbody = task.Result;
 
@@ -115,7 +115,7 @@ namespace RssReader.Tests
             GoogleAlertBody gabody = reader.Parse(XMLBody);
 
             // GoogleAlertBodyのエラーチェック
-            Assert.AreEqual(gabody.title, "Error (Parse Error)");
+            Assert.AreEqual(gabody.title, "");
             Assert.AreEqual(gabody.link, "");
 
             Assert.IsTrue(gabody.Entries.Count ==  0);
