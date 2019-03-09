@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RssReader", "RssReader\RssReader.csproj", "{BB49C42A-D05D-4708-8A16-4063868B71E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RssReaderTests", "RssReaderTests\RssReaderTests.csproj", "{FE10D93B-005E-4A83-A0AE-0A2311E81282}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BB49C42A-D05D-4708-8A16-4063868B71E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB49C42A-D05D-4708-8A16-4063868B71E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB49C42A-D05D-4708-8A16-4063868B71E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE10D93B-005E-4A83-A0AE-0A2311E81282}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE10D93B-005E-4A83-A0AE-0A2311E81282}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE10D93B-005E-4A83-A0AE-0A2311E81282}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE10D93B-005E-4A83-A0AE-0A2311E81282}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

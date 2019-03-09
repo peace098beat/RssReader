@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http;
 using System.ServiceModel.Syndication;
 using System.Windows.Forms;
 using System.Xml;
@@ -7,16 +8,21 @@ namespace RssReader
 {
     public partial class Form1 : Form
     {
+        private HttpClient client;
+
         public Form1()
         {
             InitializeComponent();
+
+            this.client = new HttpClient();
+
         }
 
         private async void button1_Click(object sender, EventArgs e)
         {
             var sw = System.Diagnostics.Stopwatch.StartNew();
 
-            textBox1.Text += $"start"+Environment.NewLine;
+            textBox1.Text += $"start" + Environment.NewLine;
 
 
             string url = @"https://www.google.co.jp/alerts/feeds/09047520966360389555/18173224082898862477";
@@ -46,6 +52,20 @@ namespace RssReader
             }
 
             textBox1.Text += $"{sw.Elapsed}" + Environment.NewLine;
+
+        }
+
+        private async void button2_Click(object sender, EventArgs e)
+        {
+            string url = @"https://www.google.co.jp/alerts/feeds/09047520966360389555/18173224082898862477";
+
+            //string body = RssReader.RSSReaderRead(url);
+            //richTextBox1.Text = body;
+
+            var response = client.GetAsync(url);
+            var content = await response.Result.Content.ReadAsStringAsync();
+
         }
     }
 }
+
